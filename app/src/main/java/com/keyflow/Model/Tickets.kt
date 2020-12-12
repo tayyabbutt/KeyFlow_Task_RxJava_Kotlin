@@ -1,0 +1,37 @@
+import com.google.gson.annotations.SerializedName
+
+data class Tickets (
+
+	@SerializedName("bookingFeeBeforeTax") val bookingFeeBeforeTax : Int,
+	@SerializedName("requestableTicketApprovedMessage") val requestableTicketApprovedMessage : String,
+	@SerializedName("taxStrategy") val taxStrategy : String,
+	@SerializedName("soldOut") val soldOut : Boolean,
+	@SerializedName("freeInvites") val freeInvites : Int,
+	@SerializedName("kfChargeOnlyReservationFee") val kfChargeOnlyReservationFee : Boolean,
+	@SerializedName("lastEntryTime") val lastEntryTime : String,
+	@SerializedName("priceBeforeTax") val priceBeforeTax : Int,
+	@SerializedName("bookingFeeTax") val bookingFeeTax : Int,
+	@SerializedName("biddableItemId") val biddableItemId : Int,
+	@SerializedName("requestableTicketRejectedMessage") val requestableTicketRejectedMessage : String,
+	@SerializedName("title") val title : String,
+	@SerializedName("currency") val currency : String,
+	@SerializedName("ticketsSold") val ticketsSold : Int,
+	@SerializedName("saleStart") val saleStart : String,
+	@SerializedName("id") val id : Int,
+	@SerializedName("taxRatio") val taxRatio : Int,
+	@SerializedName("price") val price : Int,
+	@SerializedName("isRequestableTicket") val isRequestableTicket : Boolean,
+	@SerializedName("payInvites") val payInvites : Int,
+	@SerializedName("description") val description : String,
+	@SerializedName("taxName") val taxName : String,
+	@SerializedName("bookingFee") val bookingFee : Int,
+	@SerializedName("color") val color : String,
+	@SerializedName("enabled") val enabled : Boolean,
+	@SerializedName("type") val type : String,
+	@SerializedName("priceTax") val priceTax : Int,
+	@SerializedName("saleEnd") val saleEnd : String,
+	@SerializedName("maxTicketsPerGuest") val maxTicketsPerGuest : Int,
+	@SerializedName("lowestBidPrice") val lowestBidPrice : Int,
+	@SerializedName("totalPrice") val totalPrice : Int,
+	@SerializedName("quantity") val quantity : Int
+)
