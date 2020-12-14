@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.adapter_item_layout.view.*
 
 class EventAdapter(
     private val event: List<Events>,
+    private val venues: List<Venues>,
     var context: Context
 ) :
     RecyclerView.Adapter<EventAdapter.ViewHolder>() {
@@ -32,11 +33,11 @@ class EventAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        return holder.bind(event[position], context)
+        return holder.bind(event[position], venues, context)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(event: Events, context: Context) {
+        fun bind(event: Events, venues: List<Venues>, context: Context) {
             itemView.event_name.text = event.name
             itemView.time.text = GeneralUtility.parseTtime(
                 event.startTime,
@@ -60,6 +61,11 @@ class EventAdapter(
                     "Clicked on event card: ID: " + event.id,
                     Toast.LENGTH_SHORT
                 ).show()
+            }
+            for (venue in venues){
+                if(event.venueId == venue.venueId){
+                    itemView.venue_name.text = venue.venueName
+                }
             }
         }
     }

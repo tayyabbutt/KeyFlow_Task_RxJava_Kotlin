@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
             recycler_view.apply {
                 setHasFixedSize(true)
                 layoutManager = LinearLayoutManager(this@MainActivity)
-                adapter = EventAdapter(response.data.events, this@MainActivity)
+                adapter =
+                    EventAdapter(response.data.events, response.data.venues, this@MainActivity)
             }
         } else {
             issue.visibility = View.VISIBLE
